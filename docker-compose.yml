@@ -1,0 +1,25 @@
+version: '3.2'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=root
+    ports:
+      - 5432:5432
+    networks:
+      - app
+  app:
+      image: maven:3.3.3-jdk-8
+      working_dir: /build
+      command: bash -c "mvn package -DskipTests && java -jar target/*.jar"
+      volumes:
+          - "${PWD}:/build"
+      ports:
+          - "8080:8080"
+      depends_on:
+        - db
+      networks:
+        - app
+networks:
+  app:
