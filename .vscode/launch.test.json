@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "complete",
+                "projectName": "complete",
+                "workingDirectory": "/home/developer/Workspace/gs-rest-service/complete",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "complete",
+                "projectName": "complete",
+                "workingDirectory": "/home/developer/Workspace/gs-rest-service/complete",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
